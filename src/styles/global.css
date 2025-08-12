@@ -1,1 +1,10 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+/* App tweaks */
+:root {
+  --radius: 14px;
+}
+
+.rounded-2xl {
+  border-radius: var(--radius);
+}
