@@ -72,11 +72,11 @@
     </div>
   </header>
 
-  <section class="rounded-2xl bg-white p-4">
+  <section class="rounded-2xl py-4">
     <h2 class="mb-4 text-sm font-medium text-gray-500">Summary</h2>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {#each summary as s}
-        <div class="rounded-2xl p-4">
+        <div class="rounded-2xl bg-white p-4">
           <div class="mb-4 flex items-center justify-between text-sm text-gray-500">
             <span>{s.label}</span>
             <span
