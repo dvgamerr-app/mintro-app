@@ -46,7 +46,9 @@
   <header class="flex flex-wrap items-center justify-between gap-3">
     <h1 class="text-2xl font-semibold">Transactions</h1>
     <div class="flex items-center gap-2">
-      <button class="inline-flex items-center gap-2 rounded-xl bg-gray-100 px-3 py-2 text-sm hover:bg-gray-300">
+      <button
+        class="inline-flex items-center gap-2 rounded-xl bg-gray-100 px-3 py-2 text-sm hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
           <path
             stroke-linecap="round"
@@ -57,13 +59,17 @@
 
         Filter
       </button>
-      <button class="inline-flex items-center gap-2 rounded-xl bg-gray-100 px-3 py-2 text-sm hover:bg-gray-300">
+      <button
+        class="inline-flex items-center gap-2 rounded-xl bg-gray-100 px-3 py-2 text-sm hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
+      >
         {month}
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
         </svg>
       </button>
-      <button class="inline-flex items-center gap-2 rounded-xl bg-gray-900 px-3 py-2 text-sm text-white hover:bg-gray-800">
+      <button
+        class="inline-flex items-center gap-2 rounded-xl bg-gray-900 px-3 py-2 text-sm text-white hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
         </svg>
@@ -73,11 +79,11 @@
   </header>
 
   <section class="rounded-2xl py-4">
-    <h2 class="mb-4 text-sm font-medium text-gray-500">Summary</h2>
+    <h2 class="mb-4 text-sm font-medium text-gray-500 dark:text-gray-400">Summary</h2>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {#each summary as s}
-        <div class="rounded-2xl bg-white p-4">
-          <div class="mb-4 flex items-center justify-between text-sm text-gray-500">
+        <div class="rounded-2xl bg-white p-4 dark:bg-gray-900">
+          <div class="mb-4 flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
             <span>{s.label}</span>
             <span
               class="rounded-md px-2 py-0.5 text-xs font-medium"
@@ -94,12 +100,12 @@
   </section>
 
   <section class="space-y-6">
-    <div class="text-sm font-medium text-gray-500">Today</div>
+    <div class="text-sm font-medium text-gray-500 dark:text-gray-400">Today</div>
     <div class="space-y-3">
       {#each today as t}
-        <article class="flex items-center justify-between gap-4 rounded-2xl bg-white p-4">
+        <article class="flex items-center justify-between gap-4 rounded-2xl bg-white p-4 dark:bg-gray-900">
           <div class="flex flex-1 items-center gap-4">
-            <div class="grid h-10 w-10 place-items-center rounded-full bg-gray-100">
+            <div class="grid h-10 w-10 place-items-center rounded-full bg-gray-100 dark:bg-gray-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -112,22 +118,22 @@
               </svg>
             </div>
             <div class="flex-1">
-              <div class="flex flex-wrap items-center gap-2 text-gray-900">
+              <div class="flex flex-wrap items-center gap-2 text-gray-900 dark:text-gray-100">
                 <div class="font-medium">{t.title}</div>
-                <span class="h-1 w-1 rounded-full bg-gray-300"></span>
-                <div class="flex items-center gap-1 text-gray-600">
+                <span class="h-1 w-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+                <div class="flex items-center gap-1 text-gray-600 dark:text-gray-300">
                   {t.category}
                 </div>
-                <span class="rounded-md border border-gray-300 px-2 py-0.5 text-xs">{t.type}</span>
+                <span class="rounded-md border border-gray-300 px-2 py-0.5 text-xs dark:border-gray-700">{t.type}</span>
               </div>
-              <div class="mt-1 text-sm text-gray-500">
+              <div class="mt-1 text-sm text-gray-500 dark:text-gray-400">
                 <span class="ml-2">{t.note}</span>
               </div>
             </div>
           </div>
           <div class="text-right">
-            <div class="text-base font-semibold text-gray-900">{t.amount}</div>
-            <div class="mt-1 flex items-center justify-end gap-2 text-sm text-gray-500">
+            <div class="text-base font-semibold text-gray-900 dark:text-gray-100">{t.amount}</div>
+            <div class="mt-1 flex items-center justify-end gap-2 text-sm text-gray-500 dark:text-gray-400">
               <span class="h-7 w-7 rounded-lg {t.iconBg}"></span>
               {t.account}
             </div>
@@ -136,12 +142,12 @@
       {/each}
     </div>
 
-    <div class="text-sm font-medium text-gray-500">Yesterday</div>
+    <div class="text-sm font-medium text-gray-500 dark:text-gray-400">Yesterday</div>
     <div class="space-y-3">
       {#each yesterday as y}
-        <article class="flex items-center justify-between gap-4 rounded-2xl bg-white p-4">
+        <article class="flex items-center justify-between gap-4 rounded-2xl bg-white p-4 dark:bg-gray-900">
           <div class="flex flex-1 items-center gap-4">
-            <div class="grid h-10 w-10 place-items-center rounded-full bg-gray-100">
+            <div class="grid h-10 w-10 place-items-center rounded-full bg-gray-100 dark:bg-gray-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -154,22 +160,22 @@
               </svg>
             </div>
             <div class="flex-1">
-              <div class="flex flex-wrap items-center gap-2 text-gray-900">
+              <div class="flex flex-wrap items-center gap-2 text-gray-900 dark:text-gray-100">
                 <div class="font-medium">{y.title}</div>
-                <span class="h-1 w-1 rounded-full bg-gray-300"></span>
-                <div class="flex items-center gap-1 text-gray-600">
+                <span class="h-1 w-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+                <div class="flex items-center gap-1 text-gray-600 dark:text-gray-300">
                   {y.category}
                 </div>
-                <span class="rounded-md border border-gray-300 px-2 py-0.5 text-xs">{y.type}</span>
+                <span class="rounded-md border border-gray-300 px-2 py-0.5 text-xs dark:border-gray-700">{y.type}</span>
               </div>
-              <div class="mt-1 text-sm text-gray-500">
+              <div class="mt-1 text-sm text-gray-500 dark:text-gray-400">
                 <span class="ml-2">{y.note}</span>
               </div>
             </div>
           </div>
           <div class="text-right">
             <div class="text-base font-semibold text-emerald-600">{y.amount}</div>
-            <div class="mt-1 flex items-center justify-end gap-2 text-sm text-gray-500">
+            <div class="mt-1 flex items-center justify-end gap-2 text-sm text-gray-500 dark:text-gray-400">
               <span class="h-7 w-7 rounded-lg {y.iconBg}"></span>
               {y.account}
             </div>

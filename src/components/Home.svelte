@@ -25,14 +25,14 @@
           out:fade={{ duration: 150 }}
         ></button>
         <div
-          class="absolute left-0 top-0 h-full w-72 max-w-[85vw] translate-x-0 bg-white p-4 shadow-xl"
+          class="absolute left-0 top-0 h-full w-72 max-w-[85vw] translate-x-0 bg-white p-4 shadow-xl dark:bg-gray-900"
           in:fly={{ x: -320, duration: 250, easing: cubicOut }}
           out:fly={{ x: -320, duration: 200, easing: cubicIn }}
         >
           <div class="mb-3 flex items-center justify-between">
-            <span class="text-sm font-semibold text-gray-900">Mintro</span>
+            <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">Mintro</span>
             <button
-              class="inline-flex size-8 items-center justify-center rounded-lg hover:bg-gray-100"
+              class="inline-flex size-8 items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
               on:click={() => (open = false)}
               aria-label="Close menu"
             >

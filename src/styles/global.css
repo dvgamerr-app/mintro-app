@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* App tweaks */
 :root {
@@ -7,4 +8,9 @@
 
 .rounded-2xl {
   border-radius: var(--radius);
+}
+
+/* Better system integration */
+html {
+  color-scheme: light dark;
 }

@@ -15,18 +15,16 @@
 </script>
 
 <aside class="space-y-6">
-  <div class="rounded-2xl bg-white p-2">
+  <div class="rounded-2xl bg-white p-2 dark:bg-gray-900">
     <nav class="space-y-1 text-sm">
       {#each menus as m}
         <button
           type="button"
-          class="group relative flex w-full items-center gap-3 rounded-xl px-3 py-2 text-left transition hover:bg-gray-50"
-          class:text-gray-900={m.active}
-          class:font-medium={m.active}
-          class:text-gray-600={!m.active}
+          class="group relative flex w-full items-center gap-3 rounded-xl px-3 py-2 text-left transition hover:bg-gray-50 dark:hover:bg-gray-800
+          {m.active ? 'text-gray-900 dark:text-gray-100 font-medium' : 'text-gray-600 dark:text-gray-300'}"
         >
           {#if m.active}
-            <span class="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-full bg-gray-900"></span>
+            <span class="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-full bg-gray-900 dark:bg-gray-100"></span>
           {/if}
           {@html m.icon}
           <span>{m.label}</span>
