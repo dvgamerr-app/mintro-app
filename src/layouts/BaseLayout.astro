@@ -11,9 +11,12 @@ const { title = 'Mintro App', description = 'Personal intro built with Astro + S
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- GitHub Buttons script -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
   <body class="min-h-dvh bg-gray-50 text-gray-900 antialiased">
-    <main class="mx-auto max-w-7xl p-6">
+    <main>
       <slot />
     </main>
   </body>
