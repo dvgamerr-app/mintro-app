@@ -14,3 +14,15 @@
 html {
   color-scheme: light dark;
 }
+
+@layer base {
+  /* Apply smooth color transitions globally (text, background, borders, fill, stroke) */
+  :where(*, *::before, *::after) {
+    @apply transition-colors duration-200 ease-in-out;
+  }
+
+  /* Ensure root-level background/color changes transition smoothly too */
+  :where(html, body) {
+    @apply transition-colors duration-200 ease-in-out;
+  }
+}
