@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Home from '../components/Home.svelte'
+
+const title = 'Transactions'
+const description = 'Transactions'
+---
+
+<BaseLayout {title} {description}>
+  <Home client:load page="/transactions" />
+</BaseLayout>

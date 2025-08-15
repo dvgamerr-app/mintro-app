@@ -7,5 +7,16 @@ const description = 'Welcome to Mintro — Astro layout + Svelte pages'
 ---
 
 <BaseLayout {title} {description}>
+  <script is:inline>
+    try {
+      const s = localStorage.getItem('settings')
+      if (s) {
+        const { startPage } = JSON.parse(s)
+        if (startPage && typeof startPage === 'string' && startPage !== '/' && location.pathname === '/') {
+          location.replace(startPage)
+        }
+      }
+    } catch (_) {}
+  </script>
   <Home client:load />
 </BaseLayout>

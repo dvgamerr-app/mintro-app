@@ -18,6 +18,11 @@ const { title = 'Mintro App', description = 'Personal intro built with Astro + S
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
         const isDark = ls ? ls === 'dark' : prefersDark
         document.documentElement.classList.toggle('dark', isDark)
+        const s = localStorage.getItem('settings')
+        if (s) {
+          const { lang } = JSON.parse(s)
+          if (lang) document.documentElement.setAttribute('lang', lang)
+        }
       } catch (e) {}
     </script>
   </head>
