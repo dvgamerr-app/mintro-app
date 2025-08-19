@@ -31,6 +31,22 @@ const en: Dict = {
   save: 'Save',
   reset: 'Reset',
   saved: 'Saved',
+  // Dashboard / UI specific
+  totalAssets: 'Total assets',
+  currencyUnit: 'Baht',
+  chipAssets: 'Assets',
+  chipCustomGroup: 'Group by me',
+  chipCurrencies: 'Currencies',
+  chipAssetClass: 'Asset Class',
+  assetAllocationTitle: 'My asset allocation',
+  myCurrencies: 'My currencies',
+  interestYTD: 'Interest (YTD)',
+  updatedOnPrefix: 'Updated on',
+  updatedLatest: 'Last updated',
+  readMore: 'Read more',
+  myAssets: 'My assets',
+  gold: 'Gold',
+  other: 'Other',
 }
 
 const th: Dict = {
@@ -61,6 +77,22 @@ const th: Dict = {
   save: 'บันทึก',
   reset: 'รีเซ็ต',
   saved: 'บันทึกแล้ว',
+  // Dashboard / UI specific
+  totalAssets: 'มูลค่าสินทรัพย์รวม',
+  currencyUnit: 'บาท',
+  chipAssets: 'สินทรัพย์',
+  chipCustomGroup: 'จัดกลุ่มเอง',
+  chipCurrencies: 'สกุลเงิน',
+  chipAssetClass: 'Asset Class',
+  assetAllocationTitle: 'สัดส่วนสินทรัพย์ของฉัน',
+  myCurrencies: 'สกุลเงินของฉัน',
+  interestYTD: 'ดอกเบี้ยรับรวมปีปัจจุบัน',
+  updatedOnPrefix: 'อัปเดตเมื่อ',
+  updatedLatest: 'อัปเดตล่าสุด',
+  readMore: 'อ่านเพิ่มเติม',
+  myAssets: 'สินทรัพย์ของฉัน',
+  gold: 'ทองคำ',
+  other: 'อื่นๆ',
 }
 
 const dicts: Record<'en' | 'th', Dict> = { en, th }
