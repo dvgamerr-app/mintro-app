@@ -1,13 +1,9 @@
 <script lang="ts">
   import Sidebar from './Sidebar.svelte'
-  import Transactions from './Transactions.svelte'
   import Navbar from './Navbar.svelte'
-  import Settings from './Settings.svelte'
-  import { t } from '../lib/i18n'
   import { fly, fade } from 'svelte/transition'
   import { cubicOut, cubicIn } from 'svelte/easing'
-  export let page: string = typeof window !== 'undefined' ? window.location.pathname : '/transactions'
-  const month = 'October 2024'
+
   let open = false
   const toggle = () => (open = !open)
 </script>
@@ -42,28 +38,6 @@
     </div>
   </div>
 
-  {#if page === '/transactions' || page === '/'}
-    <Transactions {month} />
-  {:else if page === '/dashboard'}
-    <section class="space-y-6">
-      <header class="flex items-center justify-between">
-        <h1 class="text-2xl font-semibold">{$t('dashboard')}</h1>
-      </header>
-      <div class="rounded-2xl bg-white p-4 dark:bg-gray-900 text-sm text-gray-600 dark:text-gray-300">Coming soon…</div>
-    </section>
-  {:else if page === '/analytics'}
-    <section class="space-y-6">
-      <header class="flex items-center justify-between">
-        <h1 class="text-2xl font-semibold">{$t('analytics')}</h1>
-      </header>
-      <div class="rounded-2xl bg-white p-4 dark:bg-gray-900 text-sm text-gray-600 dark:text-gray-300">Coming soon…</div>
-    </section>
-  {:else if page === '/settings'}
-    <section class="space-y-6">
-      <header class="flex flex-wrap items-center justify-between gap-3">
-        <h1 class="text-2xl font-semibold">{$t('settings')}</h1>
-      </header>
-      <Settings />
-    </section>
-  {/if}
+  <!-- Main content slot -->
+  <slot />
 </section>

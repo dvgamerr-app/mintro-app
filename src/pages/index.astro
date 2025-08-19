@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import Home from '../components/Home.svelte'
+import TransactionsPage from '../components/TransactionsPage.svelte'
 
 const title = 'Mintro'
 const description = 'Welcome to Mintro — Astro layout + Svelte pages'
@@ -18,5 +18,5 @@ const description = 'Welcome to Mintro — Astro layout + Svelte pages'
       }
     } catch (_) {}
   </script>
-  <Home client:load />
+  <TransactionsPage client:load />
 </BaseLayout>

@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import Home from '../components/Home.svelte'
+import AnalyticsPage from '../components/Analytics.svelte'
 
 const title = 'Analytics'
 const description = 'Analytics'
 ---
 
 <BaseLayout {title} {description}>
-  <Home client:load page="/analytics" />
+  <AnalyticsPage client:load />
 </BaseLayout>
