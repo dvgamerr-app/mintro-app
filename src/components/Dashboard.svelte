@@ -6,7 +6,6 @@
 
   // Mocked data to mirror the screenshot
   const totals = {
-    title: 'WealthFolio',
     total: 765_648.74,
     diff: 112_654.04,
     diffPct: 17.25,
@@ -36,7 +35,7 @@
 
   // ...existing code...
 
-  const chipItems = [get(t)('chipAssets'), get(t)('chipCustomGroup'), get(t)('chipCurrencies'), get(t)('chipAssetClass')]
+  const chipItems = [get(t)('chipAssets'), get(t)('chipCurrencies'), get(t)('chipAssetClass')]
 </script>
 
 <PageLayout>
@@ -46,9 +45,8 @@
       <div class="p-5 sm:p-7">
         <div class="flex items-start justify-between gap-4">
           <div>
-            <div class="text-xl font-semibold opacity-90">{totals.title}</div>
             <div class="mt-1 text-sm opacity-90">{get(t)('totalAssets')}</div>
-            <div class="mt-1 text-4xl font-extrabold tracking-tight sm:text-5xl">{formatTHB(totals.total).replace(' ' + get(t)('currencyUnit'), '')}<span class="ml-1 text-lg font-semibold align-super">{get(t)('currencyUnit')}</span></div>
+            <div class="mt-1 text-4xl font-extrabold tracking-tight sm:text-5xl">{formatTHB(totals.total).replace(' ' + get(t)('currencyUnit'), '')}</div>
             <div class="mt-2 inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-sm">
               <span class="inline-flex size-2 rounded-full bg-emerald-400"></span>
               <span class="font-semibold">+{formatNumberTH(totals.diff)}</span>
@@ -146,7 +144,7 @@
             </div>
           </div>
           <div class="text-right">
-            <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">{formatTHB(assetGold.value).replace(' บาท', '')}</div>
+            <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">{formatTHB(assetGold.value)}</div>
             <div class="text-xs text-emerald-600 dark:text-emerald-400">+{formatNumberTH(assetGold.diff)} (+{formatPct(assetGold.diffPct)}%)</div>
           </div>
         </div>

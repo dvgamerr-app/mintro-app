@@ -13,7 +13,7 @@ const defaultSettings: Settings = {
   selectedCurrency: '฿',
   categories: ['Home', 'Health', 'Personal'],
   startPage: '/transactions',
-  lang: 'en',
+  lang: 'th',
 }
 
 function createSettingsStore() {

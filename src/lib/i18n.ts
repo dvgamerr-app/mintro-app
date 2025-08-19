@@ -33,7 +33,7 @@ const en: Dict = {
   saved: 'Saved',
   // Dashboard / UI specific
   totalAssets: 'Total assets',
-  currencyUnit: 'Baht',
+  currencyUnit: 'THB',
   chipAssets: 'Assets',
   chipCustomGroup: 'Group by me',
   chipCurrencies: 'Currencies',
@@ -79,7 +79,7 @@ const th: Dict = {
   saved: 'บันทึกแล้ว',
   // Dashboard / UI specific
   totalAssets: 'มูลค่าสินทรัพย์รวม',
-  currencyUnit: 'บาท',
+  currencyUnit: 'THB',
   chipAssets: 'สินทรัพย์',
   chipCustomGroup: 'จัดกลุ่มเอง',
   chipCurrencies: 'สกุลเงิน',

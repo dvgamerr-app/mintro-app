@@ -15,6 +15,27 @@ html {
   color-scheme: light dark;
 }
 
+/* Use Inter as the default UI font with sensible fallbacks */
+:root,
+html,
+body {
+  /* Prefer a Thai-capable font first, then Inter for Latin, then system fallbacks */
+  font-family:
+    Sarabun,
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}
+
 @layer base {
   /* Apply smooth color transitions globally (text, background, borders, fill, stroke) */
   :where(*, *::before, *::after) {
